@@ -16,5 +16,5 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 xgb_clf = xgb.XGBClassifier()
 xgb_clf = xgb_clf.fit(X_train, y_train)
-print('Точность XGBoost Classifier на обучающих данных составляет : {:.2f}'.format(xgb_clf.score(X_train, y_train)*100))
-print('Точность XGBoost Classifier на тестовых данных составляет : {:.2f}'.format(xgb_clf.score(X_test, y_test)*100))
+print(f'Точность XGBoost Classifier на обучающих данных составляет : {xgb_clf.score(X_train, y_train)*100:.2f}')
+print(f'Точность XGBoost Classifier на тестовых данных составляет : {xgb_clf.score(X_test, y_test)*100:.2f}')
